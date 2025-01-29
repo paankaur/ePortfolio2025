@@ -14,3 +14,15 @@ document.querySelectorAll(".tab").forEach((tab) => {
     document.getElementById(contentId).classList.add("active-content");
   });
 });
+// background animation
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the container element
+  const container = document.getElementById('bg-animation-stars');
+
+  // Create 150 instances of <div class="starfield"></div>
+  for (let i = 0; i < 25; i++) {
+      const star = document.createElement('div');
+      star.classList.add('starfield');
+      container.appendChild(star);
+  }
+});
