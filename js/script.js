@@ -1,19 +1,15 @@
 document.querySelectorAll(".tab").forEach((tab) => {
   tab.addEventListener("click", () => {
-    // Remove active class from all tabs and contents
-    document
-      .querySelectorAll(".tab")
-      .forEach((t) => t.classList.remove("active", "large-tab"));
-    document
-      .querySelectorAll(".tab-content")
-      .forEach((content) => content.classList.remove("active-content"));
+    if (tab.classList.contains("active")) return; // Prevent unnecessary re-render
 
-    // Add active class to clicked tab and corresponding content
+    document.querySelectorAll(".tab").forEach((t) => t.classList.remove("active", "large-tab"));
+    document.querySelectorAll(".tab-content").forEach((content) => content.classList.remove("active-content"));
+
     tab.classList.add("active", "large-tab");
-    const contentId = tab.getAttribute("data-tab");
-    document.getElementById(contentId).classList.add("active-content");
+    document.getElementById(tab.getAttribute("data-tab")).classList.add("active-content");
   });
 });
+
 // background animation
 document.addEventListener("DOMContentLoaded", function() {
   // Get the container element
@@ -25,4 +21,54 @@ document.addEventListener("DOMContentLoaded", function() {
       star.classList.add('starfield');
       container.appendChild(star);
   }
+});
+
+document.querySelectorAll(".rotated-box, .rotated-box2").forEach((box) => {
+  box.addEventListener("click", () => {
+    const projectId = box.getAttribute("data-id");
+    const project = document.getElementById(`project-${projectId}`);
+
+    document.querySelectorAll(".project-item").forEach((p) => {
+      p.classList.remove("active-project");
+      p.classList.add("inactive-project"); // Ensures previous projects are hidden
+    });
+
+    project.classList.remove("inactive-project");
+    project.classList.add("active-project");
+  });
+});
+
+// Select the .box-shadow-test element
+document.querySelector('.box-shadow-test').addEventListener('click', () => {
+  // Remove 'active-content' class from all tab contents
+  document.querySelectorAll('.tab-content').forEach(content => {
+    content.classList.remove('active-content');
+  });
+
+  // Remove 'active' class from all tabs
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.classList.remove('active');
+  });
+
+  // Add 'active-content' to the contact tab content
+  document.getElementById('contact').classList.add('active-content');
+
+  // Add 'active' class to the 'Contact' tab
+  const contactTab = document.querySelector('[data-tab="contact"]'); // Assuming the tab has a data-tab attribute
+  if (contactTab) {
+    contactTab.classList.add('active');
+  }
+});
+
+// Apply event listeners to both .rotated-box and .rotated-box2
+document.querySelectorAll('.rotated-box, .rotated-box2').forEach((box) => {
+  box.addEventListener('click', () => {
+    // Remove the 'active' class from all boxes
+    document.querySelectorAll('.rotated-box, .rotated-box2').forEach((b) => {
+      b.classList.remove('active');
+    });
+
+    // Add the 'active' class to the clicked box
+    box.classList.add('active');
+  });
 });

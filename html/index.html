@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paan's Page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/p_letter.png"
+    />
     <link rel="stylesheet" href="../style/styles.css" />
   </head>
   <body>
@@ -14,17 +20,69 @@
       </div>
       <div class="tab small-tab" data-tab="contact"><h1>Contact</h1></div>
     </div>
+
     <div class="tab-content" id="projects">
-      <div class="proj-1 text-normal">
-        <div class="proj-1 text-normal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, temporibus.</div>
-        <div class="proj-1 text-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, pariatur.</div>
-        <div class="proj-1 text-normal">Lorem ipsum dolor sit amet consectetur.</div>
-        <div class="proj-1 text-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, optio.</div>
+      <!-- ----------------------------------------------------------- contents -->
+
+      <div class="proj-container">
+        <div class="proj-nupud-vasak">
+          <div class="rotated-box active" data-id="1">Project One</div>
+          <div class="rotated-box" data-id="2">Project Two</div>
+          <div class="rotated-box" data-id="3">Project Three</div>
+        </div>
+
+        <div id="project-1" class="proj-1 active-project project-item">
+          <p class="proj-inside">
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            odit dolor atque adipisci iure libero quisquam. Iste iure ratione,
+            quis ipsa quo molestias consectetur nulla a voluptas laborum
+            architecto quae voluptates natus quod culpa at doloremque incidunt
+            quisquam! Cumque, sint? Provident nam aut quam deserunt possimus
+            quibusdam quae alias repellat.
+          </p>
+        </div>
+
+        <div id="project-2" class="proj-2 inactive-project project-item">
+          <p class="proj-inside">
+            2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+            2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+            2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+          </p>
+        </div>
+        <div id="project-3" class="proj-3 inactive-project project-item">
+          <p class="proj-inside">
+            3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+            3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+            3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+          </p>
+        </div>
+        <div id="project-4" class="proj-4 inactive-project project-item">
+          <p class="proj-inside">
+            4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+            4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+            4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+          </p>
+        </div>
+        <div id="project-5" class="proj-5 inactive-project project-item">
+          <p class="proj-inside">
+            5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+            5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+            5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+          </p>
+        </div>
+        <div class="proj-nupud-parem">
+          <div class="rotated-box2" data-id="4">Project Four</div>
+          <div class="rotated-box2" data-id="5">Project in progress</div>
+        </div>
       </div>
     </div>
+    <!-- -------------------------------------------INFO -->
     <div class="tab-content active-content" id="main">
       <p class="text-normal">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam blanditiis
+        INFO ipsum dolor, sit amet consectetur adipisicing elit. Nam blanditiis
         commodi harum exercitationem ea atque voluptatibus deleniti vitae porro,
         quasi veniam ipsum magni fugit sunt molestiae autem odit obcaecati! Odit
         reiciendis nihil nam in excepturi quibusdam sequi sit animi officia
@@ -37,11 +95,12 @@
         dicta magni corrupti pariatur!
       </p>
     </div>
+    <!-- ----------------------------------------- CONTACT -->
     <div class="tab-content" id="contact">
       <p class="text-normal">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
-        maiores, nemo pariatur numquam non provident. Veniam, nulla vel
-        voluptatem magnam omnis totam asperiores excepturi amet atque
+        CONTACT Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Reiciendis maiores, nemo pariatur numquam non provident. Veniam, nulla
+        vel voluptatem magnam omnis totam asperiores excepturi amet atque
         blanditiis, esse numquam aperiam. Libero architecto totam debitis! Nisi
         cupiditate asperiores delectus officia, ratione consequuntur voluptates.
         Consectetur hic laboriosam facilis aliquid, nesciunt, qui ipsum sint
@@ -54,8 +113,7 @@
       </p>
     </div>
     <div class="box-shadow-test">
-      
-      <p>Product of Paan Kaur Riives, &copy; 2025</p>
+      <p>Product of <span class="footer-name">Paan Kaur Riives</span> &copy; 2025</p>
     </div>
     <div id="bg-animation-stars"></div>
     <script src="../js/script.js"></script>
