@@ -72,3 +72,23 @@ document.querySelectorAll('.rotated-box, .rotated-box2').forEach((box) => {
     box.classList.add('active');
   });
 });
+
+// copy button for my email
+const copyButton = document.getElementById('copyButton');
+  const textToCopy = "paan-kaur.riives@voco.ee";
+
+  copyButton.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      copyButton.textContent = 'Copied!'; 
+      setTimeout(() => {
+        copyButton.textContent = 'Copy my e-mail';
+      }, 2000); 
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+      copyButton.textContent = 'Error!'; 
+       setTimeout(() => {
+        copyButton.textContent = 'Copy Text';
+      }, 2000); 
+    }
+  });

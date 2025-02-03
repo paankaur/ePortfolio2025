@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
 
   margin: auto;
-  padding-top: 20px 0 0 0;
+  padding: 20px 0 0 0;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,9 @@ body {
   /* height: 100vh; */
   height: auto;
   background-color: #1c1f2b;
+}
+a {
+  text-decoration: none;
 }
 .starfield {
   position: fixed;
@@ -262,14 +265,18 @@ body {
 /* --------------------------------------------- projects style */
 
 .text-normal {
-  width: 60%;
-  color: #bfb9b3;
+  width: 80%;
+  color: rgb(219, 139, 53);
   font-size: 1.5rem;
   /* text-align: center; */
   margin-left: auto;
   margin-right: auto;
 }
-
+.rng {
+  display: flex;
+  justify-content: center;
+  color: #f3f1f0b7;
+}
 .box-shadow-test {
   top: 100px;
   margin: 0 auto;
@@ -453,6 +460,85 @@ body {
   border: 1px solid black;
   color: rgba(255, 255, 255, 0.669);
 }
+/* -------------------------------------------------------------- contact page */
+#contact {
+  margin: auto;
+}
+.pkr {
+  display: flex;
+  justify-content: flex-start;
+  color: hsl(31, 53%, 53%);
+  margin-top: 60px;
+}
+.emph-text {
+  color: rgb(199, 98, 31);
+}
+.contact-page-cv {
+  display: flex;
+  justify-content: center;
+  margin: 80px;
+  cursor: pointer;
+}
+
+.contact-page-cv:hover {
+  color: #7b3f00;
+  transition: 0.3s ease-in-out;
+}
+
+#copyButton {
+  padding: 10px;
+  color: white;
+  background-color: #1c1f2b;
+  border-radius: 4px;
+  width: 200px;
+  height: fit-content;
+  border: 1px solid #d4ccd5;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+#copyButton:hover {
+  background: linear-gradient(
+    to bottom,
+    rgb(68, 19, 117) 20%,
+    rgba(15, 14, 16, 0.426) 100%
+  );
+  border: 1px solid black;
+  color: rgba(255, 255, 255, 0.669);
+}
+.email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  
+}
+.contact-page-email {
+  box-sizing: border-box;
+  display: flex;
+  width: fit-content;
+  max-width: fit-content;
+  margin: 0;
+  padding: 20px;
+}
+.phone{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ----------------------------------------------------- info */
+.welcome {
+  display: flex;
+  justify-content: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  color: #ffffffb9;
+}
+
 
 /* -------------------------------------- media */
 @media (max-width: 696px) {
@@ -518,5 +604,15 @@ body {
   .rotated-box, .rotated-box2 {
     font-size: 1.2rem;
     padding: 5px;
+  }
+  .phone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
