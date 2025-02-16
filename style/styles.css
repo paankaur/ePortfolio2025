@@ -484,6 +484,7 @@ a {
   justify-content: flex-start;
   color: hsl(31, 53%, 53%);
   margin-top: 60px;
+  margin-left: 5px;
 }
 .emph-text {
   color: rgb(199, 98, 31);
