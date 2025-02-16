@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const container = document.getElementById('bg-animation-stars');
 
   // Create 150 instances of <div class="starfield"></div>
-  for (let i = 0; i < 25; i++) {
+  for (let i = 0; i < 20; i++) {
       const star = document.createElement('div');
       star.classList.add('starfield');
       container.appendChild(star);
@@ -88,7 +88,26 @@ const copyButton = document.getElementById('copyButton');
       console.error('Failed to copy: ', err);
       copyButton.textContent = 'Error!'; 
        setTimeout(() => {
-        copyButton.textContent = 'Copy Text';
+        copyButton.textContent = 'Sorry, need to copy manually';
       }, 2000); 
     }
   });
+  // copy button for my phone
+const copyButtonPhone = document.getElementById('copyButtonPhone');
+const textToCopyPhone = "+37256258379";
+
+copyButtonPhone.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(textToCopyPhone);
+    copyButtonPhone.textContent = 'Copied!'; 
+    setTimeout(() => {
+      copyButtonPhone.textContent = 'Copy my phone number';
+    }, 2000); 
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+    copyButtonPhone.textContent = 'Error!'; 
+     setTimeout(() => {
+      copyButton.textContent = 'Sorry, need to copy manually';
+    }, 2000); 
+  }
+});

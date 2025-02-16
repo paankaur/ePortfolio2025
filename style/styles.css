@@ -4,6 +4,7 @@ body {
   margin: auto;
   padding: 20px 0 0 0;
   overflow-x: hidden;
+  /* overflow-y: hidden; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +15,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: rgb(199, 98, 31);
 }
 .starfield {
   position: fixed;
@@ -21,7 +23,7 @@ a {
   left: 50%;
   width: 6px;
   height: 5px;
-  background: rgb(155, 187, 58);
+  background: rgb(254, 254, 254);
   /* box-shadow: 0 0 1px rgb(255, 255, 255); */
   border-radius: 50%;
   animation: hyperspace linear infinite;
@@ -31,12 +33,12 @@ a {
 }
 @keyframes hyperspace {
   from {
-    transform: translate(0, 0) scale(0.2);
+    transform: translate(0, 0) scale(0.7);
     opacity: 1;
   }
   to {
     transform: translate(var(--x), var(--y)) scale(var(--scale));
-    opacity: 0;
+    opacity: 1;
   }
 }
 .starfield:nth-child(1) {
@@ -175,7 +177,7 @@ a {
   flex: 1;
   padding: 15px;
   background-color: #ddd;
-  color: rgb(48, 47, 47);
+  color: rgb(224, 195, 171);
   border: none;
   border-radius: 8px 8px 0 0;
   background: linear-gradient(
@@ -210,6 +212,9 @@ a {
   border-radius: 8px 8px 0 0;
   flex-shrink: 0;
 }
+/* .tab-small-tab {
+
+} */
 
 /* -------------------------------- main container */
 .tab-content {
@@ -231,7 +236,7 @@ a {
   flex-direction: column;
   align-items: stretch;
   height: auto;
-  min-height: 800px;
+  min-height: 670px;
   
 }
 .tab-content::after,
@@ -272,10 +277,19 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* title */
 .rng {
   display: flex;
   justify-content: center;
   color: #f3f1f0b7;
+}
+/* button to project external link */
+
+.rng-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
 }
 .box-shadow-test {
   top: 100px;
@@ -413,6 +427,7 @@ a {
   flex-direction: column;
   justify-content: space-evenly;
   padding-top: 30px;
+  margin-top: 50px;
   
 }
 .proj-nupud-parem {
@@ -421,7 +436,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   padding-top: 30px;
-  
+  margin-top: 50px;
 }
 .rotated-box2:hover {
   background: linear-gradient(
@@ -460,7 +475,7 @@ a {
   border: 1px solid black;
   color: rgba(255, 255, 255, 0.669);
 }
-/* -------------------------------------------------------------- contact page */
+/* -------------------------------------- contact page */
 #contact {
   margin: auto;
 }
@@ -473,26 +488,51 @@ a {
 .emph-text {
   color: rgb(199, 98, 31);
 }
-.contact-page-cv {
+.cv {
   display: flex;
   justify-content: center;
-  margin: 80px;
+  align-items: center;
+}
+.contact-page-cv {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 40px;
   cursor: pointer;
+  background: linear-gradient(
+    to bottom,
+    rgb(68, 19, 117) 20%,
+    rgba(15, 14, 16, 0.426) 100%
+  );
+  border: 1px solid black;
+  color: rgba(255, 255, 255, 0.669);
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: fit-content;
 }
 
-.contact-page-cv:hover {
+/* .contact-page-cv:hover {
   color: #7b3f00;
   transition: 0.3s ease-in-out;
+} */
+.contact-page-cv a:hover {
+  color: rgb(255, 255, 255);
+  transition: 0.3s ease-in-out;
 }
-
 #copyButton {
   padding: 10px;
-  color: white;
-  background-color: #1c1f2b;
+  background: linear-gradient(
+    to bottom,
+    rgb(68, 19, 117) 20%,
+    rgba(15, 14, 16, 0.426) 100%
+  );
+  border: 1px solid black;
+  color: rgba(255, 255, 255, 0.669);
   border-radius: 4px;
   width: 200px;
   height: fit-content;
-  border: 1px solid #d4ccd5;
   cursor: pointer;
   font-size: 1.5rem;
 }
@@ -503,10 +543,37 @@ a {
     rgba(15, 14, 16, 0.426) 100%
   );
   border: 1px solid black;
+  color: rgb(255, 255, 255);
+  transition: 0.3s ease-in-out;
+}
+#copyButtonPhone {
+  padding: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgb(68, 19, 117) 20%,
+    rgba(15, 14, 16, 0.426) 100%
+  );
+  border: 1px solid black;
   color: rgba(255, 255, 255, 0.669);
+  border-radius: 4px;
+  width: 200px;
+  height: fit-content;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+#copyButtonPhone:hover {
+  background: linear-gradient(
+    to bottom,
+    rgb(68, 19, 117) 20%,
+    rgba(15, 14, 16, 0.426) 100%
+  );
+  border: 1px solid black;
+  color: rgb(255, 255, 255);
+  transition: 0.3s ease-in-out;
 }
 .email {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 80px;
@@ -530,18 +597,27 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+.phone-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* ----------------------------------------------------- info */
 .welcome {
   display: flex;
   justify-content: center;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   color: #ffffffb9;
 }
 
 
 /* -------------------------------------- media */
 @media (max-width: 696px) {
+  body{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   .tabs-container {
     gap: 5;
     display: flex;
@@ -556,7 +632,9 @@ a {
     box-sizing: border-box;
     height: auto;
     position: relative;
-    
+  }
+  .tab-content.active-content {
+    min-height: 500px;
   }
   .proj-container {
     z-index: 2;
@@ -581,10 +659,22 @@ a {
     justify-content: space-evenly;
     align-items: self-end;
     padding-top: 30px;
-    
+    margin-left: 7px;
+  }
+  .proj-nupud-parem {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    margin-top: 50px;
+    margin-right: 7px;
   }
   h1 {
-    font-size: 1rem;
+    font-size: 1.6rem;
+  }
+  h2 {
+    text-align: center;
   }
   .active-project {
     display: flex;
@@ -594,6 +684,8 @@ a {
   }
   .proj-inside {
     font-size: 1.1rem;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .text-normal {
     width: 80%;
@@ -611,8 +703,11 @@ a {
     justify-content: center;
     align-items: center;
     width: fit-content;
-    max-width: fit-content;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .email {
+    margin-bottom: 20px;
   }
 }
