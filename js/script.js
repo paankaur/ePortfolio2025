@@ -111,3 +111,26 @@ copyButtonPhone.addEventListener('click', async () => {
     }, 2000); 
   }
 });
+
+const text2 = document.getElementsByClassName('text2');
+const showMore = document.getElementsByClassName('text-read-more');
+
+for (let i = 0; i < showMore.length; i++) {
+    showMore[i].addEventListener('click', function() {
+        if (text2[i].style.display === 'none' || text2[i].style.display === '') {
+            text2[i].style.display = 'block';
+            showMore[i].innerHTML = `
+                <i class="fa-solid fa-caret-up fa-1x" style="color: #ffffff"></i>
+                Read less
+                <i class="fa-solid fa-caret-up fa-1x" style="color: #ffffff"></i>
+            `;
+        } else {
+            text2[i].style.display = 'none';
+            showMore[i].innerHTML = `
+                <i class="fa-solid fa-caret-down fa-1x" style="color: #ffffff"></i>
+                Read more
+                <i class="fa-solid fa-caret-down fa-1x" style="color: #ffffff"></i>
+            `;
+        }
+    });
+}

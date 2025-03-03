@@ -13,16 +13,20 @@ body {
   height: auto;
   background-color: #1c1f2b;
 }
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+}
 a {
   text-decoration: none;
-  color: rgb(199, 98, 31);
+  color: #ffffffb9;
 }
 .starfield {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 6px;
-  height: 5px;
+  width: 2px;
+  height: 2px;
   background: rgb(254, 254, 254);
   /* box-shadow: 0 0 1px rgb(255, 255, 255); */
   border-radius: 50%;
@@ -45,121 +49,121 @@ a {
   --x: -30vw;
   --y: 40vh;
   --scale: 0.8;
-  animation-duration: 5.5s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(2) {
   --x: 20vw;
   --y: -50vh;
   --scale: 1.2;
-  animation-duration: 5s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(3) {
   --x: -50vw;
   --y: 20vh;
   --scale: 1.5;
-  animation-duration: 2.5s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(4) {
   --x: 40vw;
   --y: -30vh;
   --scale: 1.3;
-  animation-duration: 5.8s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(5) {
   --x: -20vw;
   --y: 50vh;
   --scale: 1.1;
-  animation-duration: 5.7s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(6) {
   --x: 70vw;
   --y: -60vh;
   --scale: 1.2;
-  animation-duration: 5.2s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(7) {
   --x: -60vw;
   --y: -50vh;
   --scale: 1.3;
-  animation-duration: 5s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(8) {
   --x: 50vw;
   --y: 40vh;
   --scale: 1.4;
-  animation-duration: 5.3s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(9) {
   --x: -30vw;
   --y: -30vh;
   --scale: 1.1;
-  animation-duration: 3.9s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(10) {
   --x: 20vw;
   --y: 70vh;
   --scale: 1.5;
-  animation-duration: 5.1s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(11) {
   --x: 60vw;
   --y: -80vh;
   --scale: 1.7;
-  animation-duration: 6.5s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(12) {
   --x: -70vw;
   --y: 90vh;
   --scale: 1.2;
-  animation-duration: 4.2s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(13) {
   --x: 30vw;
   --y: 100vh;
   --scale: 1.4;
-  animation-duration: 6s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(14) {
   --x: -90vw;
   --y: -40vh;
   --scale: 0.9;
-  animation-duration: 7.1s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(15) {
   --x: 80vw;
   --y: -100vh;
   --scale: 1;
-  animation-duration: 6.8s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(16) {
   --x: -40vw;
   --y: 70vh;
   --scale: 1.3;
-  animation-duration: 5.9s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(17) {
   --x: 90vw;
   --y: -30vh;
   --scale: 0.8;
-  animation-duration: 7.3s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(18) {
   --x: -20vw;
   --y: -80vh;
   --scale: 1.1;
-  animation-duration: 6.2s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(19) {
   --x: 100vw;
   --y: 60vh;
   --scale: 1.4;
-  animation-duration: 5.4s;
+  animation-duration: 8s;
 }
 .starfield:nth-child(20) {
   --x: -10vw;
   --y: -20vh;
   --scale: 1.5;
-  animation-duration: 5.6s;
+  animation-duration: 8s;
 }
 
 .tabs-container {
@@ -271,7 +275,15 @@ a {
 
 .text-normal {
   width: 80%;
-  color: rgb(219, 139, 53);
+  color: #ffffffb9;
+  font-size: 1.5rem;
+  /* text-align: center; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-info {
+  width: 80%;
+  color: #ffffffb9;
   font-size: 1.5rem;
   /* text-align: center; */
   margin-left: auto;
@@ -371,7 +383,7 @@ a {
   display: flex;
   justify-content: center;
   
-  color: rgb(219, 139, 53);
+  color: #ffffffb9;
   font-size: 1.5rem;
   width: auto;
   
@@ -482,19 +494,21 @@ a {
 .pkr {
   display: flex;
   justify-content: flex-start;
-  color: hsl(31, 53%, 53%);
+  color: #ffffffb9;
   margin-top: 60px;
   margin-left: 5px;
 }
 .emph-text {
-  color: rgb(199, 98, 31);
+  color: rgb(255, 255, 255);
 }
 .cv {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .contact-page-cv {
+  box-sizing: border-box;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -511,7 +525,7 @@ a {
   color: rgba(255, 255, 255, 0.669);
   padding: 10px 20px;
   border-radius: 5px;
-  width: fit-content;
+  width: 200px;
 }
 
 /* .contact-page-cv:hover {
@@ -611,7 +625,26 @@ a {
   padding-right: 10%;
   color: #ffffffb9;
 }
-
+.gitHub{
+  display: flex;
+  justify-content: end;
+}
+.showMore{
+  display: none;
+  justify-content: center;
+  color: #ffffffb9;
+}
+.text-read-more {
+  width: 200px;
+  color: #ffffffb9;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hide{
+  display: none;
+}
 
 /* -------------------------------------- media */
 @media (max-width: 696px) {
@@ -632,10 +665,14 @@ a {
     padding: 0;
     box-sizing: border-box;
     height: auto;
+    min-height: 651px;
     position: relative;
   }
+  .info-container{
+    min-height: 651px;
+  }
   .tab-content.active-content {
-    min-height: 500px;
+    min-height: 651px;
   }
   .proj-container {
     z-index: 2;
@@ -652,6 +689,7 @@ a {
     justify-content: space-between;
     box-sizing: border-box;
     height: auto;
+    min-height: 592px;
   }
   .proj-nupud-vasak {
     box-sizing: border-box;
@@ -676,6 +714,7 @@ a {
   }
   h2 {
     text-align: center;
+    font-size: 1.8rem;
   }
   .active-project {
     display: flex;
@@ -684,13 +723,19 @@ a {
     padding: 10px 0 0 0;
   }
   .proj-inside {
-    font-size: 1.1rem;
-    margin-left: 15px;
-    margin-right: 15px;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .text-normal {
-    width: 80%;
-    font-size: 1.3rem;
+    width: 9 0%;
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text-info {
+    width: 95%;
+    font-size: 1.5rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -710,5 +755,27 @@ a {
   }
   .email {
     margin-bottom: 20px;
+  }
+  .gitHub{
+    margin: 0 30px 20px;
+  }
+  .fa-github:hover{
+    background: red;
+  }
+  .showMore{
+    display: flex;
+    justify-content: center;
+    color: #ffffffb9;
+  }
+  .text-read-more {
+    width: 200px;
+    color: #ffffffb9;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text2{
+    display: none;
   }
 }
