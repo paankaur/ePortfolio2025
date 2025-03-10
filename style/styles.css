@@ -728,13 +728,12 @@ a {
     margin-right: 10px;
   }
   .text-normal {
-    width: 9 0%;
     font-size: 1.5rem;
     margin-left: auto;
     margin-right: auto;
   }
   .text-info {
-    width: 95%;
+    width: 80%;
     font-size: 1.5rem;
     margin-left: auto;
     margin-right: auto;
@@ -777,5 +776,18 @@ a {
   }
   .text2{
     display: none;
+  }
+}
+@media (max-width: 480px) {
+  .proj-inside {
+    font-size: 1.1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .text-info {
+    width: 90%;
+    font-size: 1.1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
